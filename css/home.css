@@ -1,0 +1,43 @@
+main.home {
+  background-color: aliceblue;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+main.home > h2 {
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 20px 0;
+  max-width: 500px;
+  color: goldenrod;
+}
+
+main.home > p {
+  line-height: 30px;
+  font-size: 20px;
+  text-align: center;
+  max-width: 500px;
+  letter-spacing: 1px;
+}
+
+main.home > article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+main.home > article > a {
+  width: 150px;
+  background-color: green;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}

@@ -1,0 +1,61 @@
+main.login {
+  background-color: aliceblue;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main.login > form {
+  background-color: green;
+  width: 80%;
+  max-width: 500px;
+  padding: 30px 10px;
+}
+
+main.login > form > h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main.login > form > input[type='email'],
+input[type='password'],
+input[type='text'] {
+  width: 100%;
+  margin: 5px 0;
+  padding: 5px;
+  border: none;
+}
+
+main.login > form > input[type='email']:focus {
+  outline: none;
+}
+
+main.login > form > input[type='text']:focus {
+  outline: none;
+}
+
+main.login > form > input[type='password']:focus {
+  outline: none;
+}
+
+main.login > form > input[type='checkbox'] {
+  margin-right: 10px;
+  accent-color: #013d01;
+}
+
+main.login > form > label {
+  font-size: 13px;
+  color: white;
+  font-weight: 600;
+}
+
+main.login > form > button {
+  width: 100%;
+  margin: 15px 0;
+  color: green;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5px 0;
+}

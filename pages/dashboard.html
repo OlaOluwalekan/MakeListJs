@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <script src="../js/all.js"></script>
+  </head>
+  <body>
+    <main class="dashboard">
+      <h1>Dashboard</h1>
+      <div class="todo-list-container"></div>
+
+      <section class="page-control">
+        <button class="prev-btn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <article class="pages-container"></article>
+        <button class="next-btn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </section>
+
+      <span class="add-fab">
+        <i class="fas fa-plus"></i>
+      </span>
+    </main>
+    <div class="overlay">
+      <form class="create-todo">
+        <span>
+          <i class="fas fa-times"></i>
+        </span>
+        <h3>Add a Todo</h3>
+        <input type="text" placeholder="Title" class="todo-title" /><br />
+        <textarea placeholder="Description" class="todo-desc"></textarea><br />
+        <button type="submit">Add</button>
+      </form>
+    </div>
+
+    <div class="delete-overlay">
+      <form>
+        <h4>Message</h4>
+        <article>
+          <button type="reset">cancel</button>
+          <button type="submit">delete</button>
+        </article>
+      </form>
+    </div>
+
+    <div class="details-overlay">
+      <section>
+        <span>
+          <i class="fas fa-times"></i>
+        </span>
+        <h3>Title</h3>
+        <p class="desc">description</p>
+        <p class="completed">completed</p>
+        <article>
+          <span class="date-created">created at</span>
+          <span class="date-updated">updated at</span>
+        </article>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/dashboard.js" type="module"></script>
+  </body>
+</html>

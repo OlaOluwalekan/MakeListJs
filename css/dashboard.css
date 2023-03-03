@@ -1,0 +1,383 @@
+main.dashboard {
+  background-color: aliceblue;
+  min-height: 90vh;
+  margin: 20px 0;
+}
+
+main.dashboard > h1 {
+  margin: auto;
+  width: fit-content;
+}
+
+main.dashboard > h1 > span {
+  color: green;
+}
+
+main.dashboard > span {
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  width: 40px;
+  aspect-ratio: 1;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+  animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+main.dashboard > span:hover {
+  animation-play-state: paused;
+  box-shadow: 2px 2px 5px black;
+}
+
+main.dashboard > div {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  /* background-color: yellow; */
+}
+
+main.dashboard > div > article {
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  /* background-color: red; */
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+main.dashboard > div > article > span {
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 20;
+}
+
+main.dashboard > div > article > span.edit {
+  right: 10px;
+  color: green;
+}
+
+main.dashboard > div > article > span.delete {
+  right: 50px;
+  color: red;
+}
+
+main.dashboard > div > article:hover {
+  background-color: white;
+  box-shadow: 1px 1px 3px black;
+}
+
+main.dashboard > div > article:hover span {
+  display: block;
+}
+
+main.dashboard > div > article > h3 {
+  color: green;
+  width: fit-content;
+  position: relative;
+}
+
+main.dashboard > div > article > h3 > span {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: red;
+  top: 50%;
+}
+
+main.dashboard > div > article > label {
+  margin-left: 10px;
+}
+
+main.dashboard > div > article > input {
+  accent-color: green;
+}
+
+main.dashboard > div > article > h3.completed {
+  text-decoration: line-through;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background: #0000006c;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  display: none;
+}
+
+.overlay > form {
+  position: absolute;
+  width: 90%;
+  max-width: 400px;
+  height: fit-content;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: green;
+  text-align: center;
+  padding: 30px 15px;
+  color: white;
+}
+
+.overlay > form > span {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  width: 30px;
+  aspect-ratio: 1;
+  background-color: red;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay > form > input {
+  width: 100%;
+  margin: 5px 0;
+  font-size: 17px;
+  padding: 5px;
+}
+
+.overlay > form > textarea {
+  width: 100%;
+  margin: 5px 0;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.overlay > form > button {
+  width: 100%;
+  font-size: 17px;
+  color: green;
+  background-color: white;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.delete-overlay {
+  width: 100vw;
+  height: 100vh;
+  background: #0000006c;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  display: none;
+}
+
+.delete-overlay > form {
+  position: absolute;
+  width: 90%;
+  max-width: 400px;
+  height: fit-content;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: green;
+  text-align: center;
+  padding: 30px 15px;
+  color: white;
+}
+
+.delete-overlay > form > h4 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.delete-overlay > form > h4 > span {
+  color: red;
+  font-weight: 700;
+}
+
+.delete-overlay > form button {
+  padding: 5px 15px;
+  margin: 0 10px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-overlay > form > article :first-child {
+  /* background-color: gold; */
+  background-color: white;
+  color: green;
+}
+
+.delete-overlay > form > article :last-child {
+  background-color: red;
+  color: white;
+}
+
+.details-overlay {
+  width: 100vw;
+  height: 100vh;
+  background: #0000006c;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  display: none;
+}
+
+.details-overlay > section {
+  position: absolute;
+  width: 90%;
+  max-width: 700px;
+  height: fit-content;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: green;
+  text-align: center;
+  padding: 30px 15px;
+  color: white;
+}
+
+.details-overlay > section > span {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  width: 30px;
+  aspect-ratio: 1;
+  background-color: red;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-overlay > section > article {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 10px;
+}
+
+.details-overlay > section > h3 {
+  font-weight: 600;
+}
+
+.details-overlay > section > p.desc {
+  background-color: white;
+  color: black;
+  line-height: 25px;
+  min-height: 150px;
+  margin: 10px 0;
+}
+
+.details-overlay > section > .completed {
+  font-size: 14px;
+  text-transform: capitalize;
+  background-color: #6bf86b;
+  color: black;
+  text-align: left;
+  width: fit-content;
+  padding: 2px 10px;
+  margin: 10px 0;
+}
+
+.date-created,
+.date-updated {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+strong {
+  font-weight: 100;
+  background: none;
+}
+
+strong > span {
+  color: goldenrod;
+}
+
+.page-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.page-control button {
+  margin: 0 5px;
+  width: 20px;
+  background: none;
+  border: none;
+  font-weight: 900;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.page-control button:hover {
+  opacity: 0.5;
+}
+
+.pages-container {
+  /* background-color: greenyellow; */
+  display: flex;
+}
+
+.pages-container span {
+  width: 25px;
+  aspect-ratio: 1;
+  /* background-color: blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-radius: 50%;
+  border: 1px solid green;
+  color: green;
+  margin: 0 5px;
+}
+
+.page-control span.current {
+  background-color: green;
+  color: white;
+}

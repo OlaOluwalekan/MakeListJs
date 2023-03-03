@@ -1,0 +1,61 @@
+main.register {
+  background-color: aliceblue;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main.register > form {
+  background-color: green;
+  width: 80%;
+  max-width: 500px;
+  padding: 30px 10px;
+}
+
+main.register > form > h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main.register > form > input[type='email'],
+input[type='password'],
+input[type='text'] {
+  width: 100%;
+  margin: 5px 0;
+  padding: 5px;
+  border: none;
+}
+
+main.register > form > input[type='email']:focus {
+  outline: none;
+}
+
+main.register > form > input[type='text']:focus {
+  outline: none;
+}
+
+main.register > form > input[type='password']:focus {
+  outline: none;
+}
+
+main.register > form > input[type='checkbox'] {
+  margin-right: 10px;
+  accent-color: #013d01;
+}
+
+main.register > form > label {
+  font-size: 13px;
+  color: white;
+  font-weight: 600;
+}
+
+main.register > form > button {
+  width: 100%;
+  margin: 15px 0;
+  color: green;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5px 0;
+}
