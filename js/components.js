@@ -1,21 +1,22 @@
-const baseUrl = 'https://ola-todo-app.cyclic.app/'
+// const feBase = 'http://localhost:5500/'
+const feBase = 'https://app-makelist.netlify.app/'
 
 export const Header = (user) => {
   const header = document.createElement('header')
   header.innerHTML = `<div>
   <h1 class="logo">Make<span>List</span></h1>
       <nav>
-        <a href="http://localhost:5500/index.html">Home</a>
-        <a href="http://localhost:5500/pages/login.html">Login</a>
-        <a href="http://localhost:5500/pages/register.html">Register</a>
+        <a href="${feBase}index.html">Home</a>
+        <a href="${feBase}pages/login.html">Login</a>
+        <a href="${feBase}pages/register.html">Register</a>
         ${
           document.title.includes('Dashboard')
-            ? `<a href="http://localhost:5500/pages/logout.html">Logout</a>`
+            ? `<a href="${feBase}pages/logout.html">Logout</a>`
             : ''
         }
         ${
           document.title.includes('Home') && user
-            ? `<a href="http://localhost:5500/pages/dashboard.html">Dashboard</a>`
+            ? `<a href="${feBase}pages/dashboard.html">Dashboard</a>`
             : ''
         }
       </nav>
