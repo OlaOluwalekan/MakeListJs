@@ -28,6 +28,10 @@ export const getUser = async (id, dashboard) => {
 
 export const getAllTodos = async (id) => {
   let page = sessionStorage.getItem('page') || 1
+  // if (page === null) {
+  //   page = 1
+  //   sessionStorage.setItem('page', 1)
+  // }
 
   try {
     const { data } = await axios(
@@ -53,8 +57,8 @@ export const getAllTodos = async (id) => {
 
     pagesContainer.innerHTML = ''
     for (let i = 1; i <= data.totalPage; i++) {
-      pagesContainer.innerHTML += `<span class=${
-        page == i ? 'current' : ''
+      pagesContainer.innerHTML += `<span data-identifier='page' class=${
+        page == i ? 'current' : 'none'
       }>${i}</span>`
     }
 
@@ -157,4 +161,14 @@ prevBtn.onclick = () => {
   page--
   sessionStorage.setItem('page', page)
   getAllTodos(user._id)
+}
+
+pagesContainer.onclick = (e) => {
+  if (e.target.dataset.identifier == 'page') {
+    console.log(e.target.textContent)
+    const user = JSON.parse(sessionStorage.getItem('currentUser'))
+    let page = e.target.textContent
+    sessionStorage.setItem('page', page)
+    getAllTodos(user._id)
+  }
 }

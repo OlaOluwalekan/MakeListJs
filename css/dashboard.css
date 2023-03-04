@@ -375,6 +375,7 @@ strong > span {
   border: 1px solid green;
   color: green;
   margin: 0 5px;
+  cursor: pointer;
 }
 
 .page-control span.current {

@@ -106,10 +106,14 @@ export const addNewTodo = async () => {
       const { totalPage, itemsInTotal } = JSON.parse(
         sessionStorage.getItem('todoData')
       )
-      if (itemsInTotal % 5 == 0) {
-        sessionStorage.setItem('page', totalPage + 1)
-      } else {
+      if (itemsInTotal == 0) {
         sessionStorage.setItem('page', totalPage)
+      } else {
+        if (itemsInTotal % 5 == 0) {
+          sessionStorage.setItem('page', totalPage + 1)
+        } else {
+          sessionStorage.setItem('page', totalPage)
+        }
       }
       await getAllTodos(user._id)
     } catch (error) {
